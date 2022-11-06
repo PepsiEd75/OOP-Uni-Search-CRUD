@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>feedback form</title>
+    <link rel="stylesheet" href="photon.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+
+    <!--CSS Design-->
+    <style>
+      body{
+        background-color: #FBF3F2;
+      }
+
+      h2{
+        font-family: 'Pacifico', serif;
+        color:#fa991c; 
+        font-size: 30px;
+      }
+
+      nav{
+        width:auto;
+        height:70px;
+        background-color: #fa991c;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      .logo{
+        margin-top: -3px;
+        float:left;
+        font-family: 'Pacifico', serif;
+        font-size: 20px;
+        text-shadow: 4px 4px 4px  rgba(0,0,0,0.2);
+        color:#FBF3F2;
+      }
+
+    .nav-button{
+        margin-top: 15px;
+        float:right;
+        font-size: 20px;
+        font-family: 'Pacifico', serif;   
+      }
+
+    .nav-button a {
+        font-size: 20px;
+        text-shadow: 4px 4px 4px  rgba(0,0,0,0.2);
+        color:#FBF3F2;
+        padding:10px;
+        cursor: pointer;
+     }
+
+     .mainWrapper{
+        padding:50px;
+     }
+
+     label{
+        font-family: 'Pacifico', serif;
+        color:#fa991c; 
+        font-size: 20px;
+        padding-right: 15px;
+        padding-top: 15px;
+      }
+
+      .form-control0{
+
+        height:30px;
+        width: 900px;
+      }
+
+      .form-control1{
+
+        height:300px;
+        width: 900px;
+      }
+
+      .default{
+        margin-top: 30px;
+        cursor: pointer;
+        color:white;
+        background-color: #fa991c;
+        border:#fa991c;
+        border-radius: 10px;
+        width: 150px;
+        padding: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+  <!--NAVIGATION-->
+    <nav>
+      <div class="logo">
+          <p>Uni Search</p>
+      </div>
+      
+      <div class="nav-button">
+          <a href="index.html">Home</a>
+          <a href="#" style="color:#e0cac8;">Feedback</a>
+      </div>
+  </nav>
+
+  <!--MAIN FORM-->
+    <div class="mainWrapper">
+
+      <h2>Feedback Form</h2>
+
+      <form>
+        <div class="form-group">
+          <label>File name</label><br>
+          <input id="fileName" type="text" class="form-control0">
+        </div>
+
+        <div class="form-group">
+          <label>Content</label><br>
+          <textarea id="fileContents" class="form-control1" row="5"></textarea>
+
+        </div>
+      </form>
+      <button id="btnCreate" class="default">Create</button>
+      <button id="btnRead" class="default">Read</button>
+      <button id="btnDelete" class="default">Delete</button>
+      <button id="btnUpdate" class="default">Update</button>
+
+    
+    </div>
+
+    <!--CALLING JS-->
+    <script src="main.js">  
+      
+    </script>
+  </body>
+</html>

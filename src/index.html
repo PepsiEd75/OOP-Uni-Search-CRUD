@@ -1,0 +1,310 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
+        <title>Uni Search</title>
+
+        <!--CSS DESIGN-->
+        <style>
+            *{
+                margin:0
+            }
+
+            body{
+                background-color: #FBF3F2;
+                overflow-x: hidden;
+            }
+
+            nav{
+                width:auto;
+                height:70px;
+                background-color: #fa991c;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .logo{
+                margin-top: 15px;
+                float:left;
+                font-family: 'Pacifico', serif;
+                font-size: 20px;
+                text-shadow: 4px 4px 4px  rgba(0,0,0,0.2);
+                color:#FBF3F2;
+            }
+
+            .nav-button{
+                margin-top: 15px;
+                margin-right: 50px;
+                float:right;
+                font-size: 20px;
+                font-family: 'Pacifico', serif;   
+            }
+
+            .nav-button a {
+
+                font-size: 20px;
+                text-shadow: 4px 4px 4px  rgba(0,0,0,0.2);
+                color:#FBF3F2;
+                padding:10px;
+            }
+
+            .exit{
+                width:50px; 
+                height:50px; 
+                cursor: pointer; 
+                position: absolute;
+                top:10px;
+                right:25px;
+            }
+
+            .pic{
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                margin-bottom: 30px;
+            }
+
+            .dark{
+                z-index: 1;
+                position: absolute;
+                top:70px;
+                width: 1518px;
+                height: 707px;
+                background-color: black;
+                opacity: 0.2;
+            }
+
+            .main-title{
+                z-index: 2;
+                font-family: 'Pacifico', serif;
+                font-size: 30px;
+                color:#FBF3F2;  
+                text-shadow: 4px 4px 4px  rgba(0,0,0,0.2);
+                position: absolute;
+                border:black;
+                outline: solid 10px #fa991c;
+                top:300px;
+                left:50px;
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            h2{
+                font-family: 'Pacifico', serif;
+                color:#fa991c; 
+                font-size: 50px;
+            }
+
+            hr{
+                border: 5px solid #fa991c;
+                border-radius: 4px;
+                width: 50px;
+            }
+
+            .form0{
+                background-color: white;
+                padding:40px;
+                width: 500px;
+                height: 180px;
+                border-radius: 40px;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                margin-bottom: 30px;
+            }
+
+            label{
+                font-family: 'Pacifico', serif;
+                color:#fa991c; 
+                font-size: 30px;
+                padding-right: 15px;
+                padding-top: 15px;
+            }
+
+            select{
+                height:40px;
+                width:200px;
+                border: 2px solid #fa991c;
+                border-radius: 5px;
+                font-size: large;
+            }
+
+            select:focus{
+                border:3px solid #fa991c;
+            }
+
+            .one{
+                font-family: 'Pacifico', serif;
+                color:#fa991c; 
+                font-size: 30px;
+                margin-right: 95px;
+            }
+
+            input{
+                height:40px;
+                width:200px;
+                border: 2px solid #fa991c;
+                border-radius: 5px;
+                font-size: large;
+            }
+
+            input:focus{
+                border:3px solid #fa991c;
+            }
+
+            .submit{
+                margin-top: 30px;
+                cursor: pointer;
+                color:white;
+                background-color: #fa991c;
+                border:#fa991c;
+                border-radius: 10px;
+                padding:10px;
+                width: 150px;
+            }
+
+            .submit:hover{
+                background-color: #fbb254;
+                border:#fbb254;
+            }
+
+            .title-2 hr{
+                border: 5px solid #fa991c;
+                border-radius: 4px;
+                width: 70px;
+            }
+
+            .cover-box{
+                background-color: white;
+                padding:40px;
+                width: 800px;
+                height: 380px;
+                border-radius: 40px;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                margin-bottom: 30px;
+            }
+
+            table {
+                border-collapse: collapse;
+                box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+                width: 800px;
+                border-radius: 10px;
+            }
+
+            td {
+                border: #f4f4f6 2px solid;
+                padding: 20px;
+            }
+
+            tr:nth-child(odd){
+                background-color: #fa991c;
+                color:white;
+                text-align: center;
+            }
+
+            tr:nth-child(even){
+                background-color: #fbb254;
+                color:white;
+                text-align: center;
+            }
+
+            .top{
+                font-family: 'Pacifico', serif;
+                font-style: thin;
+                font-size: 20px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <!--NAVIGATION-->
+        <nav>
+            <div class="logo">
+                <p>Uni Search</p>
+            </div>
+            
+            <div class="nav-button">
+                <a href="#" style="color:#e0cac8;">Home</a>
+                <a href="form.html">Feedback</a>
+                <a href="#" onclick="self.close();"><img src="close.png" class="exit"></a>
+            </div>
+        </nav>
+
+        <!--PICTURE AND SHADING-->
+        <div class="dark"></div>
+        <img src="uni.jpg" class="pic">
+
+        <!--MAIN TITLE AT PICTURE-->
+        <div class="main-title">
+            <h1>The Best Varsity Only For You</h1>
+        </div>
+
+        <!--MAIN TITLE FOR FORM-->
+        <div class="title-1" align="center">
+            <h2>Form</h2>
+            <hr>
+            <br>
+            <br>
+        </div>  
+
+        <!--MAIN FORM-->
+        <div align="center">
+            <div class="form0" align="center">
+                <label>Type of Varsity: </label>
+                    <select id="varsity">
+                        <option value="university">University</option>
+                        <option value="universiti">Universiti</option>
+                        <option value="college">College</option>
+                        <option value="polytechnic">Polytechnic</option>>
+                    </select>
+                <label class="one">Country: </label>
+                <input id="country" placeholder="Country">
+            <button class="submit" onclick="buttonClicked()">Submit</button>
+            <script src = "function.js"></script>
+        </div>
+
+        <!--MAIN TITLE FOR RESULTS-->
+        <div class="title-2" align="center">
+            <h2>Results</h2>
+            <hr>
+            <br>
+            <br>
+        </div>  
+        
+        <!--TABLE FOR RESULTS-->
+        <div align="center">
+            <div class="cover-box">
+                <table>
+                    <tr class="top">
+                        <td><strong>Varsity Name</strong></td>
+                        <td><strong>Web Page</strong></td>
+                    </tr>
+        
+                    <tr>
+                        <td class="uni0">-</td>
+                        <td class="web0">-</td>
+                    </tr>
+        
+                    <tr>
+                        <td class="uni1">-</td>
+                        <td class="web1">-</td>
+                    </tr>
+        
+                    <tr>
+                        <td class="uni2">-</td>
+                        <td class="web2">-</td>
+                    </tr>
+        
+                    <tr>
+                        <td class="uni3">-</td>
+                        <td class="web3">-</td>
+                    </tr>
+
+                    <tr>
+                        <td class="uni4">-</td>
+                        <td class="web4">-</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

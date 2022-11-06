@@ -1,0 +1,4 @@
+Hey guys just wanted to let you that the application is working perfectly fine but there is one big problem, 
+when I wanted to check any universities in South Korea. The website does not respond at all. Maybe this is 
+due to the fact that there is no parameter for South Korea in the API. Therefore, I suggest you should at 
+least state an alert so that the user will not wait, expecting the website to output the info.
